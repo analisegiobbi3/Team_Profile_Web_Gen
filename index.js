@@ -46,3 +46,16 @@ const questions = [
         choices: ['Engineer', 'Intern', 'Finish creating your team'],
     },
 ]
+
+function init(){
+    return inquirer.prompt(questions)
+    .then((answers) => {
+        const htmlPageContent = generateHTML(answers);
+        fs.writeFile('./index.html', htmlPageContent, (err) => 
+        err ? console.log(err) : console.log('You have successfully generated your new team page')
+        )
+    })
+}
+
+init();
+

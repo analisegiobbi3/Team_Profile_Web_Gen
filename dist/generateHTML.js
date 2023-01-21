@@ -11,6 +11,7 @@ function generateHTML(){
         <head>
         <body>
             <header>
+                <h1>My Team<h1>
             <header>
         <body>
     `
