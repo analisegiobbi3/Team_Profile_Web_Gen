@@ -1,0 +1,23 @@
+{
+  "name": "mod_10_challenge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/analisegiobbi3/mod_10_challenge.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/analisegiobbi3/mod_10_challenge/issues"
+  },
+  "homepage": "https://github.com/analisegiobbi3/mod_10_challenge#readme",
+  "dependencies": {
+    "inquirer": "^8.2.4"
+  }
+}
