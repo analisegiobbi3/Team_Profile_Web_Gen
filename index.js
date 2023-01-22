@@ -1,7 +1,6 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const generateHTML = require('./scr/generateHTML');
-const common  = require('./lib/Common')
 const manager  = require('./lib/Manager')
 const engineer  = require('./lib/Engineer')
 const intern  = require('./lib/Intern')
@@ -59,7 +58,7 @@ function generateTeam (){
                 generateIntern()
                 break
             default:
-                init()
+                generateHTML()
         }
     })
 }
@@ -128,7 +127,12 @@ const generateIntern = () => {
     })
 }
 
+const generateHTML = data => {
+    fs.writeFile('./output/index.html', generateHTML, err =>{
+        err ? console.log(err) : console.log('You have successfully created your team page')
+    })
 
+}
 
 
 function init(){
