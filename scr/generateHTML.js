@@ -92,15 +92,15 @@ cardsToPage = (data) => {
     const cardAray = [];
     for( let i =0; i<data.length; i++){
 
-        if (employee.employeeType === 'Manager'){
+        if (data[i].employeeType === 'Manager'){
             const createManagerCard = managerCard(data[i])
             cardAray.push(createManagerCard)
         }
-        if (employee.employeeType === 'Engineer'){
+        if (data[i].employeeType === 'Engineer'){
             const createEngineerCard = engineerCard(data[i])
             cardAray.push(createEngineerCard)
         }
-        if (employee.employeeType === 'Intern'){
+        if (data[i].employeeType === 'Intern'){
             const createInternCard = internCard(data[i])
             cardAray.push(createInternCard)
         }

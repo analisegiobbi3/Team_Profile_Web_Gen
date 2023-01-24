@@ -7,9 +7,9 @@ const intern  = require('./lib/Intern')
 
 generateTeamArray = [];
 
-// function init(){
-//     generateManager();
-// }
+function init(){
+    generateManager();
+}
 
 const generateManager = () => {
     return inquirer.prompt ([
@@ -40,9 +40,7 @@ const generateManager = () => {
 
         generateTeamArray.push(createManager)
         generateTeam()
-
     })
-
 }
 
 function generateTeam (){
@@ -132,28 +130,28 @@ const generateIntern = () => {
 }
 
 
-const htmlFileCreate = data => {
-    fs.writeFile('./output/index.html', data, err =>{
-        err ? console.log(err) : console.log('you have successfully created your team')
+// const htmlFileCreate = data => {
+//     fs.writeFile('./output/index.html', data, err =>{
+//         err ? console.log(err) : console.log('you have successfully created your team')
+//     })
+// }
+
+// generateManager()
+//     .then (generateTeam)
+//     .then(generateTeamArray => {
+//         return cardsToPage(generateTeamArray)
+//     })
+//     .then (html =>{
+//         return htmlFileCreate(html)
+//     })
+
+function htmlFileCreate (){
+    fs.writeFile('./output/index.html', cardsToPage(generateTeamArray), err =>{
+        err ? console.log(err) : console.log('You have successfully created your team page')
     })
 }
 
-generateManager()
-    .then(generateTeamArray => {
-        return cardsToPage(generateTeamArray)
-    })
-    .then (html =>{
-        return htmlFileCreate(html)
-    })
 
-// function htmlFileCreate (){
-//     fs.writeFile('./output/index.html', generateHTML(generateTeamArray), err =>{
-//         err ? console.log(err) : console.log('You have successfully created your team page')
-//     })
-
-// }
-
-
-// init()
+init()
 
 
