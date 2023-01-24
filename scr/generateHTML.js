@@ -1,4 +1,4 @@
-const generateHTML = (teamCards) => {
+const generateHTML = (cards) => {
     return `
     <!DOCTYPE html>
     <html lang="en">
@@ -16,7 +16,7 @@ const generateHTML = (teamCards) => {
             <main>
                  <div class="container">
                     <div class="row justify-content-center" id="team-cards">
-                        ${teamCards}
+                        ${cards}
                     </div>
                  </div>
             </main>
@@ -85,6 +85,39 @@ const internCard = (intern) => {
     <div>
     `
 }
+
+
+
+
+
+
+generateHTML(teamCards)
+
+cardsToPage = (data) => {
+
+    const cardAray = [];
+    cardAray.forEach(){
+        if (employee.employeeType === 'Manager'){
+            const createManagerCard = managerCard(employee)
+            cardAray.push(createManagerCard)
+        }
+        if (employee.employeeType === 'Engineer'){
+            const createEngineerCard = engineerCard(employee)
+            cardAray.push(createEngineerCard)
+        }
+        if (employee.employeeType === 'Intern'){
+            const createInternCard = internCard(employee)
+            cardAray.push(createInternCard)
+        }
+
+    };
+    const cards = cardAray.join('')
+    const teamCards = generateHTML(cards)
+
+    return teamCards;
+}
+
+
 
 
 
