@@ -87,38 +87,29 @@ const internCard = (intern) => {
 }
 
 
-
-
-
-
-generateHTML(teamCards)
-
 cardsToPage = (data) => {
 
     const cardAray = [];
-    cardAray.forEach(){
+    for( let i =0; i<data.length; i++){
+
         if (employee.employeeType === 'Manager'){
-            const createManagerCard = managerCard(employee)
+            const createManagerCard = managerCard(data[i])
             cardAray.push(createManagerCard)
         }
         if (employee.employeeType === 'Engineer'){
-            const createEngineerCard = engineerCard(employee)
+            const createEngineerCard = engineerCard(data[i])
             cardAray.push(createEngineerCard)
         }
         if (employee.employeeType === 'Intern'){
-            const createInternCard = internCard(employee)
+            const createInternCard = internCard(data[i])
             cardAray.push(createInternCard)
         }
-
     };
     const cards = cardAray.join('')
     const teamCards = generateHTML(cards)
 
     return teamCards;
 }
-
-
-
 
 
 module.export = generateHTML;

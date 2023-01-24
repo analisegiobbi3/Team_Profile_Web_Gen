@@ -127,8 +127,8 @@ const generateIntern = () => {
     })
 }
 
-const generateHTML = data => {
-    fs.writeFile('./output/index.html', generateHTML, err =>{
+const htmlFileCreate = data => {
+    fs.writeFile('./output/index.html', data, err =>{
         err ? console.log(err) : console.log('You have successfully created your team page')
     })
 
@@ -136,7 +136,7 @@ const generateHTML = data => {
 
 
 function init(){
-    generateManager()
+    htmlFileCreate()
 }
 
 init();
