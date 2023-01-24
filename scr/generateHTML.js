@@ -1,4 +1,4 @@
-const generateHTML = (cards) => {
+const generateHTML = (cards)  => {
     return `
     <!DOCTYPE html>
     <html lang="en">

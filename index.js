@@ -7,6 +7,10 @@ const intern  = require('./lib/Intern')
 
 generateTeamArray = [];
 
+// function init(){
+//     generateManager();
+// }
+
 const generateManager = () => {
     return inquirer.prompt ([
         {
@@ -46,7 +50,7 @@ function generateTeam (){
         {
             type: 'list',
             name: 'employeeType',
-            message: 'Add another team member, or finsh creating your team: ',
+            message: 'Add another team member, or finish creating your team: ',
             choices: ['Engineer', 'Intern', 'Finish creating your team'],
         },
     ]).then(function(input){
@@ -58,7 +62,7 @@ function generateTeam (){
                 generateIntern()
                 break
             default:
-                generateHTML()
+                htmlFileCreate()
         }
     })
 }
@@ -127,17 +131,29 @@ const generateIntern = () => {
     })
 }
 
+
 const htmlFileCreate = data => {
     fs.writeFile('./output/index.html', data, err =>{
-        err ? console.log(err) : console.log('You have successfully created your team page')
+        err ? console.log(err) : console.log('you have successfully created your team')
+    })
+}
+
+generateManager()
+    .then(generateTeamArray => {
+        return cardsToPage(generateTeamArray)
+    })
+    .then (html =>{
+        return htmlFileCreate(html)
     })
 
-}
+// function htmlFileCreate (){
+//     fs.writeFile('./output/index.html', generateHTML(generateTeamArray), err =>{
+//         err ? console.log(err) : console.log('You have successfully created your team page')
+//     })
+
+// }
 
 
-function init(){
-    htmlFileCreate()
-}
+// init()
 
-init();
 
