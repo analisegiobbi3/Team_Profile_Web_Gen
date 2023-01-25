@@ -1,0 +1,13 @@
+header {
+    text-align: center;
+};
+
+#employee-card{
+    box-shadow: 5px 5px 5px grey;
+    margin: 1rem;
+
+}
+
+.card-body{
+    background-color: azure;
+}

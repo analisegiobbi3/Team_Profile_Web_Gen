@@ -130,23 +130,8 @@ const generateIntern = () => {
 }
 
 
-// const htmlFileCreate = data => {
-//     fs.writeFile('./output/index.html', data, err =>{
-//         err ? console.log(err) : console.log('you have successfully created your team')
-//     })
-// }
-
-// generateManager()
-//     .then (generateTeam)
-//     .then(generateTeamArray => {
-//         return cardsToPage(generateTeamArray)
-//     })
-//     .then (html =>{
-//         return htmlFileCreate(html)
-//     })
-
 function htmlFileCreate (){
-    fs.writeFile('./output/index.html', cardsToPage(generateTeamArray), err =>{
+    fs.writeFile('./dist/index.html', cardsToPage(generateTeamArray), err =>{
         err ? console.log(err) : console.log('You have successfully created your team page')
     })
 }
