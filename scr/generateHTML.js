@@ -8,27 +8,35 @@ const generateHTML = (cards)  => {
             <meta charset="UTF-8" />
             <meta name="viewport" content="width=device-width, initial-scale=1.0" />
             <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+            <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+            integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+            crossorigin="anonymous"
+             />
             <link rel="stylesheet" href="style.css">
             <title>Employee Website</title>
         </head>
-        <body>
-            <header>
-                <nav>
-                    <h1>My Team<h1>
+        </body>
+        <div class="container-fluid">
+            <div class="row">
+                <nav class="col-12 mb-3 team-heading jumbotron bg-info text-white">
+                    <h1 class="text-cneter">My Team</h1>
                 </nav>
+            </div>
+        </div>
 
-            <header>
-            <main>
-                 <div class="container">
-                    <div class="row justify-content-center" id="team-cards">
-                        ${cards}
-                    </div>
-                 </div>
-            </main>
+        <div class="containter">
+            <div class="row">
+                <div class="row justify-content-center col-12 d-flex">
+                    ${cards}
+                </div>
+            </div>
+        </div>
         </body>
         <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    </html>
     `;
 
 }
@@ -36,55 +44,55 @@ const generateHTML = (cards)  => {
 // HTML for the manager card
 const managerCard = (manager) => {
     return `
-    <div class="card employee-card" style="width: 18rem;">
+    <div class="card employee-card">
         <div class="card-header">
-            <h3>${manager.name}<h3>
-            <h3>Manager<h3>
-        <div>
+            <h2 class="card-title">${manager.name}</h2>
+            <h3 class="card-title">Manager</h3><i class="fa-solid fa-people-roof"></i>
+        </div>
 
          <div class="card-body">
-            <p>ID Number: ${manager.id}<p>
-            <p>Email: <a href="mailto:${manager.email}"></a>${manager.email}<p>
-            <p>Office Number: ${manager.officeNum}<p>
-        <div>
-    <div>
+            <p>ID Number: ${manager.id}</p>
+            <p>Email: <a href="mailto:${manager.email}"></a>${manager.email}</p>
+            <p>Office Number: ${manager.officeNum}</p>
+        </div>
+    </div>
     `
 }
 
 //HTML for the engineer card
 const engineerCard = (engineer) => {
     return `
-    <div class="card employee-card" style="width: 18rem;">
+    <div class="card employee-card">
         <div class="card-header">
-            <h3>${engineer.name}<h3>
-            <h3>Engineer<h3>
-        <div>
+            <h2 class="card-title">${engineer.name}</h2>
+            <h3 class="card-title">Engineer</h3><i class="fa-solid fa-code"></i>
+        </div>
 
          <div class="card-body">
-            <p>ID Number: ${engineer.id}<p>
-            <p>Email: <a href="mailto:${engineer.email}"></a> ${engineer.email}<p>
+            <p>ID Number: ${engineer.id}</p>
+            <p>Email: <a href="mailto:${engineer.email}"></a> ${engineer.email}</p>
             <p>Github: <a href="https://github.com/${engineer.GitHub}">${engineer.GitHub}</a></p>
-        <div>
+        </div>
 
-    <div>
+    </div>
     `
 }
 
 //HTML for the intern card
 const internCard = (intern) => {
     return `
-    <div class="card employee-card" style="width: 18rem;">
+    <div class="card employee-card">
         <div class="card-header">
-            <h3>${intern.name}<h3>
-            <h3>Intern<h3>
-        <div>
+            <h3 class="card-title">${intern.name}</h3>
+            <h3 class="card-title">Intern</h3><i class="fa-regular fa-graduation-cap"></i>
+        </div>
 
         <div class="card-body">
-            <p>ID Number: ${intern.id}<p>
-            <p>Email: <a href="mailto:${intern.email}"></a> ${intern.email}<p>
-            <p>Office Number: ${intern.school}<p>
-        <div>
-    <div>
+            <p>ID Number: ${intern.id}</p>
+            <p>Email: <a href="mailto:${intern.email}"></a> ${intern.email}</p>
+            <p>Office Number: ${intern.school}</p>
+        </div>
+    </div>
     `
 }
 
