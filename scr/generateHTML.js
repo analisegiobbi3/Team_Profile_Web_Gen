@@ -8,12 +8,10 @@ const generateHTML = (cards)  => {
             <meta charset="UTF-8" />
             <meta name="viewport" content="width=device-width, initial-scale=1.0" />
             <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-            <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
-            integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
-            crossorigin="anonymous"
-             />
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+            <link href="https://fonts.googleapis.com/css?family=Public+Sans:300i,300,500&display=swap" rel="stylesheet">
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+            <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
             <link rel="stylesheet" href="style.css">
             <title>Employee Website</title>
         </head>
@@ -52,7 +50,7 @@ const managerCard = (manager) => {
 
          <div class="card-body">
             <p>ID Number: ${manager.id}</p>
-            <p>Email: <a href="mailto:${manager.email}"></a>${manager.email}</p>
+            <p class="email">Email: <a href="mailto:${manager.email}">${manager.email}</a></p>
             <p>Office Number: ${manager.officeNum}</p>
         </div>
     </div>
@@ -70,7 +68,7 @@ const engineerCard = (engineer) => {
 
          <div class="card-body">
             <p>ID Number: ${engineer.id}</p>
-            <p>Email: <a href="mailto:${engineer.email}"></a> ${engineer.email}</p>
+            <p class="email">Email: <a href="mailto:${engineer.email}">${engineer.email}</a></p>
             <p>Github: <a href="https://github.com/${engineer.GitHub}">${engineer.GitHub}</a></p>
         </div>
 
@@ -89,7 +87,7 @@ const internCard = (intern) => {
 
         <div class="card-body">
             <p>ID Number: ${intern.id}</p>
-            <p>Email: <a href="mailto:${intern.email}"></a> ${intern.email}</p>
+            <p class="email">Email: <a href="mailto:${intern.email}">${intern.email}</a></p>
             <p>Office Number: ${intern.school}</p>
         </div>
     </div>

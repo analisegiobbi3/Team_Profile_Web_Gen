@@ -6,7 +6,7 @@ nav{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-#employee-card{
+.employee-card{
     box-shadow: 5px 5px 5px grey;
     margin: 1rem;
 
@@ -15,4 +15,14 @@ nav{
 .card-body{
     background-color: #edede9;
     color: #778da9;
+}
+
+.card{
+    margin: 5px;
+}
+
+.container{
+    margin: 100px auto;
+    justify-content: space-evenly;
+    display: flex;
 }
