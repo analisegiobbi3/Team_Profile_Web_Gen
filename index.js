@@ -1,9 +1,9 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const generateHTML = require('./scr/generateHTML');
-const manager  = require('./lib/Manager')
-const engineer  = require('./lib/Engineer')
-const intern  = require('./lib/Intern')
+const Manager  = require('./lib/Manager')
+const Engineer  = require('./lib/Engineer')
+const Intern  = require('./lib/Intern')
 
 generateTeamArray = [];
 
@@ -36,7 +36,7 @@ const generateManager = () => {
     ])
     .then (newManager => {
         const {employeeName, id, email, officeNum} = newManager;
-        const createManager= new manager (employeeName, id, email, officeNum)
+        const createManager= new Manager (employeeName, id, email, officeNum)
 
         generateTeamArray.push(createManager)
         generateTeam()
@@ -90,7 +90,7 @@ const generateEngineer = () => {
     ])
     .then(newEngineer => {
         const {employeeName, id, email, GitHub} = newEngineer
-        const createEngineer = new engineer(employeeName, id, email, GitHub)
+        const createEngineer = new Engineer(employeeName, id, email, GitHub)
         
         generateTeamArray.push(createEngineer)
         generateTeam()
@@ -122,7 +122,7 @@ const generateIntern = () => {
     ])
     .then(newIntern => {
         const {employeeName, id, email, School} = newIntern
-        const createIntern = new intern(employeeName, id, email, School)
+        const createIntern = new Intern(employeeName, id, email, School)
         
         generateTeamArray.push(createIntern)
         generateTeam()
