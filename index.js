@@ -5,12 +5,15 @@ const Manager  = require('./lib/Manager')
 const Engineer  = require('./lib/Engineer')
 const Intern  = require('./lib/Intern')
 
+//Generating an empty array where the team objects can be stored 
 generateTeamArray = [];
 
+//initiates the function by starting with the manager prompt
 function init(){
     generateManager();
 }
 
+//Uses inquirerer to genreate a team manager 
 const generateManager = () => {
     return inquirer.prompt ([
         {
@@ -34,15 +37,19 @@ const generateManager = () => {
             message: 'Enter your office number: ',
         },
     ])
+    //once the questions are answered, we use object destructuring to pull out the object keys
     .then (newManager => {
         const {employeeName, id, email, officeNum} = newManager;
         const createManager= new Manager (employeeName, id, email, officeNum)
 
+        //push the new object to the array
         generateTeamArray.push(createManager)
+        //calls the function that will allow you to choose which employee to create next
         generateTeam()
     })
 }
 
+//this function calls you to choose a new team member to create. it uses a switch conditiont o call the different functions for createing employees
 function generateTeam (){
     return inquirer.prompt([
         {
@@ -65,6 +72,7 @@ function generateTeam (){
     })
 }
 
+//function gnerates an engineer, similar to the manager function 
 const generateEngineer = () => {
     return inquirer.prompt ([
         {
@@ -97,6 +105,7 @@ const generateEngineer = () => {
     })
 }
 
+//function generates an intern, similar to the manager function
 const generateIntern = () => {
     return inquirer.prompt ([
         {
@@ -130,13 +139,14 @@ const generateIntern = () => {
 }
 
 
+//after all employees are created, this function can be called by the switch. Writes to an html file using the cardsToPage function 
 function htmlFileCreate (){
     fs.writeFile('./dist/index.html', cardsToPage(generateTeamArray), err =>{
         err ? console.log(err) : console.log('You have successfully created your team page')
     })
 }
 
-
+//initiates the program
 init()
 
 

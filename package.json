@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/analisegiobbi3/mod_10_challenge#readme",
   "dependencies": {
-    "inquirer": "^8.2.4"
+    "inquirer": "^8.2.4",
+    "jest": "^29.4.0"
   }
 }

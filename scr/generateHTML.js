@@ -1,3 +1,5 @@
+//generates the body of the heml, pulling in input 'cards', which comes from the generate cards function
+//generate cards creates new cards for each employee
 const generateHTML = (cards)  => {
     return `
     <!DOCTYPE html>
@@ -31,7 +33,7 @@ const generateHTML = (cards)  => {
 
 }
 
-
+// HTML for the manager card
 const managerCard = (manager) => {
     return `
     <div class="card employee-card" style="width: 18rem;">
@@ -49,7 +51,7 @@ const managerCard = (manager) => {
     `
 }
 
-
+//HTML for the engineer card
 const engineerCard = (engineer) => {
     return `
     <div class="card employee-card" style="width: 18rem;">
@@ -68,6 +70,7 @@ const engineerCard = (engineer) => {
     `
 }
 
+//HTML for the intern card
 const internCard = (intern) => {
     return `
     <div class="card employee-card" style="width: 18rem;">
@@ -85,7 +88,9 @@ const internCard = (intern) => {
     `
 }
 
-
+// function to create cards for the main page
+//uses for loop to go through the data provided by the index. js file 
+// adds each card to a blank array, whcih will then be pushed to the main HTML body
 cardsToPage = (data) => {
 
     const cardAray = [];
