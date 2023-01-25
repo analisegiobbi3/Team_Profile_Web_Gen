@@ -39,7 +39,7 @@ const managerCard = (manager) => {
 
             <div class="card-body">
                 <p>ID Number: ${manager.id}<p>
-                <p>Email: ${manager.email}<p>
+                <p>Email: <a href="mailto:${manager.email}"></a>${manager.email}<p>
                 <p>Office Number: ${manager.officeNum}<p>
             <div>
         <div>
@@ -59,7 +59,7 @@ const engineerCard = (engineer) => {
 
             <div class="card-body">
                 <p>ID Number: ${engineer.id}<p>
-                <p>Email: ${engineer.email}<p>
+                <p>Email: <a href="mailto:${engineer.email}"></a> ${engineer.email}<p>
                 <p>Office Number: ${engineer.GitHub}<p>
             <div>
         <div>
@@ -78,7 +78,7 @@ const internCard = (intern) => {
 
             <div class="card-body">
                 <p>ID Number: ${intern.id}<p>
-                <p>Email: ${intern.email}<p>
+                <p>Email: <a href="mailto:${intern.email}"></a> ${intern.email}<p>
                 <p>Office Number: ${intern.school}<p>
             <div>
         <div>
@@ -92,15 +92,15 @@ cardsToPage = (data) => {
     const cardAray = [];
     for( let i =0; i<data.length; i++){
 
-        if (data[i].employeeType === 'Manager'){
+        if (data[i].getRole === 'Manager'){
             const createManagerCard = managerCard(data[i])
             cardAray.push(createManagerCard)
         }
-        if (data[i].employeeType === 'Engineer'){
+        if (data[i].getRole === 'Engineer'){
             const createEngineerCard = engineerCard(data[i])
             cardAray.push(createEngineerCard)
         }
-        if (data[i].employeeType === 'Intern'){
+        if (data[i].getRole === 'Intern'){
             const createInternCard = internCard(data[i])
             cardAray.push(createInternCard)
         }
