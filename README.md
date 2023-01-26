@@ -43,6 +43,10 @@
   Once you have complted adding employees, an HTML file will generate in the `dist` folder.
 
   ![Sample HTML](./images/Screen%20Shot%202023-01-25%20at%208.38.30%20PM.png)
+  
+  
+  https://user-images.githubusercontent.com/59839160/214739017-6e761180-9a07-4279-b687-3b484dfe8d84.mp4
+
 
   ## [License](#table-of-contents)
   [mit](http://choosealicense.com/licenses/mit/)
