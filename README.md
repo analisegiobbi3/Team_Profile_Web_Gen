@@ -44,7 +44,6 @@
 
   ![Sample HTML](./images/Screen%20Shot%202023-01-25%20at%208.38.30%20PM.png)
 
-
   ## [License](#table-of-contents)
   [mit](http://choosealicense.com/licenses/mit/)
 
