@@ -19,7 +19,7 @@ const generateHTML = (cards)  => {
         <div class="container-fluid">
             <div class="row">
                 <nav class="col-12 mb-3 team-heading jumbotron bg-info text-white">
-                    <h1 class="text-cneter">My Team</h1>
+                    <h1 class="text-center">My Team</h1>
                 </nav>
             </div>
         </div>
@@ -45,7 +45,7 @@ const managerCard = (manager) => {
     <div class="card employee-card">
         <div class="card-header">
             <h2 class="card-title">${manager.name}</h2>
-            <h3 class="card-title">Manager</h3><i class="fa-solid fa-people-roof"></i>
+            <h3 class="card-title">Manager</h3><i class="fa fa-mug-hot"></i>
         </div>
 
          <div class="card-body">
@@ -63,7 +63,7 @@ const engineerCard = (engineer) => {
     <div class="card employee-card">
         <div class="card-header">
             <h2 class="card-title">${engineer.name}</h2>
-            <h3 class="card-title">Engineer</h3><i class="fa-solid fa-code"></i>
+            <h3 class="card-title">Engineer</h3><i class="fa fa-code"></i>
         </div>
 
          <div class="card-body">
@@ -82,7 +82,7 @@ const internCard = (intern) => {
     <div class="card employee-card">
         <div class="card-header">
             <h3 class="card-title">${intern.name}</h3>
-            <h3 class="card-title">Intern</h3><i class="fa-regular fa-graduation-cap"></i>
+            <h3 class="card-title">Intern</h3><i class="fa fa-graduation-cap"></i>
         </div>
 
         <div class="card-body">
