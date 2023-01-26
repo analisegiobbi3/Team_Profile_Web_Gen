@@ -61,7 +61,7 @@
 
    Tests cover outputs of teh employee, engineer, intern, and manager classes
 
-   ![Tests](./images//Screen%20Shot%202023-01-25%20at%208.38.30%20PM.png)
+   ![Tests](./images/Screen%20Shot%202023-01-25%20at%208.38.51%20PM.png)
 
    ---
   ## [Questions](#table-of-contents)
