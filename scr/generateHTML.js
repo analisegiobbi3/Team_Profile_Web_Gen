@@ -18,8 +18,8 @@ const generateHTML = (cards)  => {
         </body>
         <div class="container-fluid">
             <div class="row">
-                <nav class="col-12 mb-3 team-heading jumbotron bg-info text-white">
-                    <h1 class="text-center">My Team</h1>
+                <nav class="col-12 mb-3 team-heading jumbotron" style="background-color: #3a5a40">
+                    <h1 class="text-center" style="font-size: 60px; color: #dad7cd">My Team</h1>
                 </nav>
             </div>
         </div>
@@ -44,8 +44,8 @@ const managerCard = (manager) => {
     return `
     <div class="card employee-card">
         <div class="card-header">
-            <h2 class="card-title">${manager.name}</h2>
-            <h3 class="card-title">Manager</h3><i class="fa fa-mug-hot"></i>
+            <h2 class="card-title" style="color: #003049">${manager.name}</h2>
+            <h4 class="card-title">Manager</h4><i class="fa fa-mug-hot"></i>
         </div>
 
          <div class="card-body">
@@ -62,8 +62,8 @@ const engineerCard = (engineer) => {
     return `
     <div class="card employee-card">
         <div class="card-header">
-            <h2 class="card-title">${engineer.name}</h2>
-            <h3 class="card-title">Engineer</h3><i class="fa fa-code"></i>
+            <h2 class="card-title" style="color: #003049">${engineer.name}</h2>
+            <h4 class="card-title">Engineer</h4><i class="fa fa-code"></i>
         </div>
 
          <div class="card-body">
@@ -81,8 +81,8 @@ const internCard = (intern) => {
     return `
     <div class="card employee-card">
         <div class="card-header">
-            <h3 class="card-title">${intern.name}</h3>
-            <h3 class="card-title">Intern</h3><i class="fa fa-graduation-cap"></i>
+            <h2 class="card-title" style="color: #003049">${intern.name}</h2>
+            <h4 class="card-title">Intern</h4><i class="fa fa-graduation-cap"></i>
         </div>
 
         <div class="card-body">
