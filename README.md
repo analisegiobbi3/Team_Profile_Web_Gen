@@ -22,7 +22,7 @@
   To install the application please make sure the have the proper node packages installed:
 
   `npm install` will install the required node packages.
-  
+
   Use the instruction below to understand how to use the program. 
 
 
@@ -38,7 +38,11 @@
 
   This will start the program. You will first be instructed to input your manager information. Once this is done you can choose to add another employee or move complete your inputs. You may add as many employees are you wish.
 
+  ![startup](./images/Screen%20Shot%202023-01-25%20at%208.40.25%20PM.png)
+
   Once you have complted adding employees, an HTML file will generate in the `dist` folder.
+
+  ![Sample HTML](./images/Screen%20Shot%202023-01-25%20at%208.38.30%20PM.png)
 
 
   ## [License](#table-of-contents)
@@ -56,6 +60,8 @@
    `npm run test`
 
    Tests cover outputs of teh employee, engineer, intern, and manager classes
+
+   ![Tests](./images//Screen%20Shot%202023-01-25%20at%208.38.30%20PM.png)
 
    ---
   ## [Questions](#table-of-contents)

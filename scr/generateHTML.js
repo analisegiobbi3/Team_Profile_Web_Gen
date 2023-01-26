@@ -88,7 +88,7 @@ const internCard = (intern) => {
         <div class="card-body">
             <p>ID Number: ${intern.id}</p>
             <p class="email">Email: <a href="mailto:${intern.email}">${intern.email}</a></p>
-            <p>Office Number: ${intern.school}</p>
+            <p>School: ${intern.school}</p>
         </div>
     </div>
     `
